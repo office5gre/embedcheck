@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "office5gre-embedcheck"
+version = "0.1.0"
+description = "比对向量库中的条目与来源文件，标出内容已变、已删或重复入库的条目。"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "office5gre" }]
+keywords = ["vector-store", "embedding", "rag", "audit"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://office5gre.github.io"
+Repository = "https://github.com/office5gre/embedcheck"
+Issues = "https://github.com/office5gre/embedcheck/issues"
+
+[project.scripts]
+embedcheck = "embedcheck:main"
+
+[tool.setuptools]
+py-modules = ["embedcheck"]
